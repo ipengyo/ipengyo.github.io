@@ -187,8 +187,8 @@
     <article id="post-easyuiBug01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/20/easyuiBug01/" class="article-date">
-  	<time datetime="2015-08-20T12:51:11.447Z" itemprop="datePublished">2015-08-20</time>
+      <a href="/2015/08/21/easyuiBug01/" class="article-date">
+  	<time datetime="2015-08-21T06:13:59.406Z" itemprop="datePublished">2015-08-21</time>
 </a>
     </div>
   
@@ -201,7 +201,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/20/easyuiBug01/">easyuiBug01</a>
+      <a class="article-title" href="/2015/08/21/easyuiBug01/">easyuiBug01</a>
     </h1>
   
 
@@ -219,6 +219,7 @@
 </code></pre></li>
 <li>valiBox<br>在使用easyui loader 加载 validBox验证组件的时候，发现验证后的提示文字不显示<br>看loader的源码后才得知，validBox的显示验证的样式是来源与tooltip的组件，而这个组件在源码竟然有2个，有一个竟然没有加载css所以导致没有显示easyui的验证提示<pre><code>tooltip:{js:<span class="string">"jquery.tooltip.js"</span>,css:<span class="string">"tooltip.css"</span>}
 </code></pre></li>
+<li>datetimebox<br>同commbobox同样的问题，在loader找到这个对象的配置，在他后面的 <strong> dependencies </strong> 加上了 window依赖</li>
 </ul>
 <blockquote>
 <p>来源于：easyui版本1.43</p>

@@ -11,13 +11,13 @@ ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefi
 然后点进去发现是window找不到，后来深入发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="easyuiBug01">
-<meta property="og:url" content="http://antdiary.com/2015/08/20/easyuiBug01/index.html">
+<meta property="og:url" content="http://antdiary.com/2015/08/21/easyuiBug01/index.html">
 <meta property="og:site_name" content="蚂蚁日记">
 <meta property="og:description" content="easyui-loader加载器的坑
 commbobox在使用easyui loader 加载  combobox 的多选下拉列表组件时，使用的是easyLoader加载发现问题js控制台报错：
 ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefined     
 然后点进去发现是window找不到，后来深入发">
-<meta property="og:updated_time" content="2015-08-20T12:51:11.447Z">
+<meta property="og:updated_time" content="2015-08-21T06:13:59.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="easyuiBug01">
 <meta name="twitter:description" content="easyui-loader加载器的坑
@@ -195,8 +195,8 @@ ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefi
       <div class="body-wrap"><article id="post-easyuiBug01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/20/easyuiBug01/" class="article-date">
-  	<time datetime="2015-08-20T12:51:11.447Z" itemprop="datePublished">2015-08-20</time>
+      <a href="/2015/08/21/easyuiBug01/" class="article-date">
+  	<time datetime="2015-08-21T06:13:59.406Z" itemprop="datePublished">2015-08-21</time>
 </a>
     </div>
   
@@ -238,6 +238,7 @@ ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefi
 </code></pre></li>
 <li>valiBox<br>在使用easyui loader 加载 validBox验证组件的时候，发现验证后的提示文字不显示<br>看loader的源码后才得知，validBox的显示验证的样式是来源与tooltip的组件，而这个组件在源码竟然有2个，有一个竟然没有加载css所以导致没有显示easyui的验证提示<pre><code>tooltip:{js:<span class="string">"jquery.tooltip.js"</span>,css:<span class="string">"tooltip.css"</span>}
 </code></pre></li>
+<li>datetimebox<br>同commbobox同样的问题，在loader找到这个对象的配置，在他后面的 <strong> dependencies </strong> 加上了 window依赖</li>
 </ul>
 <blockquote>
 <p>来源于：easyui版本1.43</p>
@@ -282,7 +283,7 @@ ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefi
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="easyuiBug01" data-title="easyuiBug01" data-url="http://antdiary.com/2015/08/20/easyuiBug01/"></div>
+	<div class="ds-thread" data-thread-key="easyuiBug01" data-title="easyuiBug01" data-url="http://antdiary.com/2015/08/21/easyuiBug01/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
