@@ -87,7 +87,7 @@
 <meta name="description" content="java、nodeJs、angularJs、爱好者">
 <meta property="og:type" content="website">
 <meta property="og:title" content="蚂蚁日记">
-<meta property="og:url" content="http://antdiary.com/index.html">
+<meta property="og:url" content="http://antdiary.com/archives/2016/07/index.html">
 <meta property="og:site_name" content="蚂蚁日记">
 <meta property="og:description" content="java、nodeJs、angularJs、爱好者">
 <meta name="twitter:card" content="summary">
@@ -113,9 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://antdiary.com/"/>
+  <link rel="canonical" href="http://antdiary.com/archives/2016/07/"/>
 
-  <title> 蚂蚁日记 </title>
+  <title> 归档 | 蚂蚁日记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,9 +155,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,445 +232,178 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 4 篇日志。 继续努力。
+    </span>
+
     
+
+      
+      
       
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
+      
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/09/easyuiBug01/" itemprop="url">
-                  easyuiBug01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          
-            <hr>
-<p>#easyui-loader加载器的坑</p>
-<ul>
-<li><p>commbobox<br>在使用easyui loader 加载  combobox 的多选下拉列表组件时，使用的是easyLoader加载发现问题js控制台报错：</p>
-<pre><code>ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefined     
-</code></pre><p>然后点进去发现是window找不到，后来深入发现easyui 的loader 加载器里面的配置依赖没有window<br>后来我把他后面的 <strong> dependencies </strong> 加上了 window依赖</p>
-<pre><code>combobox:{js:&quot;jquery.combobox.js&quot;,css:&quot;combobox.css&quot;,dependencies:[&quot;combo&quot;,&quot;window&quot;]
-</code></pre></li>
-<li>valiBox<br>在使用easyui loader 加载 validBox验证组件的时候，发现验证后的提示文字不显示<br>看loader的源码后才得知，validBox的显示验证的样式是来源与tooltip的组件，而这个组件在源码竟然有2个，有一个竟然没有加载css所以导致没有显示easyui的验证提示<pre><code>tooltip:{js:&quot;jquery.tooltip.js&quot;,css:&quot;tooltip.css&quot;}
-</code></pre></li>
-<li>datetimebox<br>同commbobox同样的问题，在loader找到这个对象的配置，在他后面的 <strong> dependencies </strong> 加上了 window依赖</li>
-</ul>
-<blockquote>
-<p>来源于：easyui版本1.43</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/07/09/easyuiBug01/" itemprop="url">
               
-                
-                <a class="post-title-link" href="/2016/07/09/ProductCollaborationRoleDefinitions/" itemprop="url">
-                  产品前端架构-协作流程-角色定义(1)
-                </a>
+                <span itemprop="name">easyuiBug01</span>
               
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<p><img src="http://7xj6uj.com1.z0.glb.clouddn.com/eb6fb43a-1451-4a70-8075-0a7fe2888379.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/09/ProductCollaborationRoleDefinitions/#more" rel="contents">
-              阅读全文 &raquo;
             </a>
-          </div>
         
-      
-    </div>
+      </h1>
 
-    <div>
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-07-09T01:09:02+08:00"
+              content="2016-07-09" >
+          07-09
+        </time>
+      </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
+
     
+
+      
+      
       
 
-  
-  
+      
+      
 
-  
-  
-  
+      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-    
-      <header class="post-header">
-
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/07/09/ProductCollaborationRoleDefinitions/" itemprop="url">
               
-                
-                <a class="post-title-link" href="/2016/07/09/JobDescription/" itemprop="url">
-                  产品前端架构-协作流程-职责说明(3)
-                </a>
+                <span itemprop="name">产品前端架构-协作流程-角色定义(1)</span>
               
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>##职责说明</p>
-<p>###1.页面工程师</p>
-<ul>
-<li><p>切图，图片的优化</p>
-</li>
-<li><p>页面制作，优化页面效果与结构</p>
-</li>
-<li><p>能够完成一些简单的业务逻辑的开发</p>
-</li>
-</ul>
-<p>###2.前端工程师</p>
-<ul>
-<li><p>主导指定前后端分离规范</p>
-</li>
-<li><p>主导前后端联调对接测试</p>
-</li>
-<li><p>系统前端设计架构，满足一定非功能性需求</p>
-</li>
-<li><p>完成系统前端的业务逻辑实现，优化实现逻辑 </p>
-</li>
-</ul>
-<p>###3.后端工程师</p>
-<ul>
-<li><p>协助制定前后端分离规范</p>
-</li>
-<li><p>协助前后端联调对接测试</p>
-</li>
-<li><p>完成后端系统架构以及业务逻辑的实现</p>
-</li>
-</ul>
-<p>###4.思考</p>
-<ul>
-<li><p>角色与人的关系？</p>
-</li>
-<li><p>协作流程中输出的各个规范应该需要包含哪些内容？</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/09/CollaborativeProcess/" itemprop="url">
-                  产品前端架构-协作流程(2)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<p>##协作流程</p>
-<p><img src="http://7xj6uj.com1.z0.glb.clouddn.com/26bbed67-66b1-48a9-8862-fab73f541184.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/09/CollaborativeProcess/#more" rel="contents">
-              阅读全文 &raquo;
             </a>
-          </div>
         
-      
-    </div>
+      </h1>
 
-    <div>
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-07-09T01:09:02+08:00"
+              content="2016-07-09" >
+          07-09
+        </time>
+      </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
+
     
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/07/09/JobDescription/" itemprop="url">
+              
+                <span itemprop="name">产品前端架构-协作流程-职责说明(3)</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-07-09T01:09:02+08:00"
+              content="2016-07-09" >
+          07-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/07/09/CollaborativeProcess/" itemprop="url">
+              
+                <span itemprop="name">产品前端架构-协作流程(2)</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-07-09T01:09:02+08:00"
+              content="2016-07-09" >
+          07-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
   </section>
 
   
+
 
 
           </div>
@@ -850,6 +581,12 @@
   
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   
 

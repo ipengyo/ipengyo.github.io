@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="产品前端架构," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="java、nodeJs、angularJs、爱好者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="蚂蚁日记">
-<meta property="og:url" content="http://antdiary.com/index.html">
+<meta name="description" content="##协作流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="产品前端架构-协作流程(2)">
+<meta property="og:url" content="http://antdiary.com/2016/07/09/CollaborativeProcess/index.html">
 <meta property="og:site_name" content="蚂蚁日记">
-<meta property="og:description" content="java、nodeJs、angularJs、爱好者">
+<meta property="og:description" content="##协作流程">
+<meta property="og:image" content="http://7xj6uj.com1.z0.glb.clouddn.com/26bbed67-66b1-48a9-8862-fab73f541184.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
+<meta property="og:image" content="http://7xj6uj.com1.z0.glb.clouddn.com/8b94cc8d-d084-485a-9a92-4b8d9c5763d6.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
+<meta property="og:updated_time" content="2015-07-28T15:23:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蚂蚁日记">
-<meta name="twitter:description" content="java、nodeJs、angularJs、爱好者">
+<meta name="twitter:title" content="产品前端架构-协作流程(2)">
+<meta name="twitter:description" content="##协作流程">
+<meta name="twitter:image" content="http://7xj6uj.com1.z0.glb.clouddn.com/26bbed67-66b1-48a9-8862-fab73f541184.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://antdiary.com/"/>
+  <link rel="canonical" href="http://antdiary.com/2016/07/09/CollaborativeProcess/"/>
 
-  <title> 蚂蚁日记 </title>
+  <title> 产品前端架构-协作流程(2) | 蚂蚁日记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,9 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,9 +236,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -256,10 +258,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/09/easyuiBug01/" itemprop="url">
-                  easyuiBug01
-                </a>
+                产品前端架构-协作流程(2)
               
             
           </h1>
@@ -299,380 +298,74 @@
       
 
       
-        
-          
-            <hr>
-<p>#easyui-loader加载器的坑</p>
-<ul>
-<li><p>commbobox<br>在使用easyui loader 加载  combobox 的多选下拉列表组件时，使用的是easyLoader加载发现问题js控制台报错：</p>
-<pre><code>ComboBox Uncaught TypeError: Cannot read property &apos;defaults&apos; of undefined     
-</code></pre><p>然后点进去发现是window找不到，后来深入发现easyui 的loader 加载器里面的配置依赖没有window<br>后来我把他后面的 <strong> dependencies </strong> 加上了 window依赖</p>
-<pre><code>combobox:{js:&quot;jquery.combobox.js&quot;,css:&quot;combobox.css&quot;,dependencies:[&quot;combo&quot;,&quot;window&quot;]
-</code></pre></li>
-<li>valiBox<br>在使用easyui loader 加载 validBox验证组件的时候，发现验证后的提示文字不显示<br>看loader的源码后才得知，validBox的显示验证的样式是来源与tooltip的组件，而这个组件在源码竟然有2个，有一个竟然没有加载css所以导致没有显示easyui的验证提示<pre><code>tooltip:{js:&quot;jquery.tooltip.js&quot;,css:&quot;tooltip.css&quot;}
-</code></pre></li>
-<li>datetimebox<br>同commbobox同样的问题，在loader找到这个对象的配置，在他后面的 <strong> dependencies </strong> 加上了 window依赖</li>
-</ul>
-<blockquote>
-<p>来源于：easyui版本1.43</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/09/ProductCollaborationRoleDefinitions/" itemprop="url">
-                  产品前端架构-协作流程-角色定义(1)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<p><img src="http://7xj6uj.com1.z0.glb.clouddn.com/eb6fb43a-1451-4a70-8075-0a7fe2888379.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/09/ProductCollaborationRoleDefinitions/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/09/JobDescription/" itemprop="url">
-                  产品前端架构-协作流程-职责说明(3)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>##职责说明</p>
-<p>###1.页面工程师</p>
-<ul>
-<li><p>切图，图片的优化</p>
-</li>
-<li><p>页面制作，优化页面效果与结构</p>
-</li>
-<li><p>能够完成一些简单的业务逻辑的开发</p>
-</li>
-</ul>
-<p>###2.前端工程师</p>
-<ul>
-<li><p>主导指定前后端分离规范</p>
-</li>
-<li><p>主导前后端联调对接测试</p>
-</li>
-<li><p>系统前端设计架构，满足一定非功能性需求</p>
-</li>
-<li><p>完成系统前端的业务逻辑实现，优化实现逻辑 </p>
-</li>
-</ul>
-<p>###3.后端工程师</p>
-<ul>
-<li><p>协助制定前后端分离规范</p>
-</li>
-<li><p>协助前后端联调对接测试</p>
-</li>
-<li><p>完成后端系统架构以及业务逻辑的实现</p>
-</li>
-</ul>
-<p>###4.思考</p>
-<ul>
-<li><p>角色与人的关系？</p>
-</li>
-<li><p>协作流程中输出的各个规范应该需要包含哪些内容？</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/09/CollaborativeProcess/" itemprop="url">
-                  产品前端架构-协作流程(2)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T01:09:02+08:00" content="2016-07-09">
-              2016-07-09
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
+        <hr>
 <p>##协作流程</p>
-<p><img src="http://7xj6uj.com1.z0.glb.clouddn.com/26bbed67-66b1-48a9-8862-fab73f541184.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/09/CollaborativeProcess/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<p><img src="http://7xj6uj.com1.z0.glb.clouddn.com/26bbed67-66b1-48a9-8862-fab73f541184.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""><br><a id="more"></a></p>
+<hr>
+<blockquote>
+<ul>
+<li>页面入口规范</li>
+<li>同步数据规范</li>
+<li>异步接口规范</li>
+</ul>
+</blockquote>
+<p>##维护时的协作流程</p>
+<hr>
+<p><img src="http://7xj6uj.com1.z0.glb.clouddn.com/8b94cc8d-d084-485a-9a92-4b8d9c5763d6.jpg?imageView2/1/q/75|watermark/2/text/6JqC6JqB5pel6K6wfGFudGRpYXJ5LmNvbQ==/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/产品前端架构/" rel="tag">#产品前端架构</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/09/JobDescription/" rel="prev" title="产品前端架构-协作流程-职责说明(3)">
+                产品前端架构-协作流程-职责说明(3) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -680,6 +373,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -699,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://img.name2012.com/uploads/allimg/2015-06/15-011434_306.jpg"
@@ -754,6 +460,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -850,6 +567,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
