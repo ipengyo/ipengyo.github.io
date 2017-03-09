@@ -2,7 +2,7 @@ title: 个人简历-黄英鹏
 date: 2017-03-09 22:01:31
 ---
 
-若您不方便阅读可以下载本简历的  *[pdf版本](/resume.pdf)*
+==若您不方便阅读可以下载本简历的  *[pdf版本](/resume.pdf)*==
 
 # 联系方式
 
@@ -115,7 +115,8 @@ date: 2017-03-09 22:01:31
 我在这个公司工作的技术栈：
 
 后端：
-> 开发语言java，struts2，hibernate，sprint
+> 开发语言java，
+> 采用三件套：struts2，hibernate，spring （公司采取了一些封装吧）
 > 数据库 Mysql
 
 后端：
