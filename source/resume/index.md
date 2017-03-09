@@ -37,10 +37,10 @@ date: 2017-03-09 22:01:31
 后端：
 
 * 采用node.js作为后端开发语言，使用了微服务的架构模式，
+* 异步解决方案使用Promise
 * 各个服务之间使用sececa 串联起来
 * 消息队列使用了RabbitMQ
-* 我们cto自己封装express等一系列框架，使用起来整体风格偏于sails.js，
-* 各个服务之间使用sececa 串联起来
+* 我们cto基于express封装的框架，使用起来整体风格偏于sails.js，
 * 数据库使用mongodb
 
 前端：
@@ -69,6 +69,7 @@ date: 2017-03-09 22:01:31
 
 后端：
 * 开发语言：nodejs
+* 异步解决方案为：async
 * web框架: sails.js框架
 
 前端：
@@ -83,7 +84,7 @@ date: 2017-03-09 22:01:31
 > 自己企业用的官网，做了响应式适配
 
 后端：
-* node.js中的keystone.js框架
+* 使用的CMS为：node.js中的keystone.js框架
 
 前端：
 * jquery
@@ -135,7 +136,7 @@ date: 2017-03-09 22:01:31
 
 以下均为我熟练使用的技能
 
-* 开发环境：mac (上一家公司一直在用mac开发)
+* 开发环境：Mac (上一家公司一直在用Mac开发)
 * Web开发：Node（目前在做的）/ Java（之前做过1年）
 * Web框架：Express/Sails.js/spring
 * 前端框架：Bootstrap/AngularJS/jQuery
