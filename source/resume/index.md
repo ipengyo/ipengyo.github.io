@@ -21,6 +21,7 @@ date: 2017-03-09 22:01:31
 
  * 小黄/男/1994
  * 工作年限：2年+
+ * 教育经历：湖北科技职业学院/2015年毕业
  * Github：http://github.com/ipengyo
  * 期望职位：Web前端、javascript程序员、Node.js后端
  * 期望薪资：12k-15k
