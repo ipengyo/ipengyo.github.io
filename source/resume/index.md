@@ -29,6 +29,29 @@ date: 2017-03-09 22:01:31
 
 ---
 
+
+# 开源项目和作品
+
+* [网易云课堂页面(仿写)](https://github.com/ipengyo/neteaseCloudClassroom)：这个项目是2015年时候我自己在网易云课堂上面报名前端教学的时候的大作业，目前github上面有40+ star
+
+* [mlop-geo](https://github.com/ipengyo/mlop-geo)：这个项目是在一个Node.js项目，作用是封装 地理查询接口，列如：根据经纬度查询到该经纬度所对应的地理信息 国家、省份、城市 等。（项目略简单）
+
+# 技能清单
+
+以下均为我熟练使用的技能
+
+* 开发环境：Mac (上一家公司一直在用Mac开发)
+* Web开发：Node.js（目前在做的）/ Java（之前做过1年）
+* Web框架：Express/Sails.js/spring
+* 前端框架：Bootstrap/AngularJS/jQuery
+* 前端工具：Bower/Gulp/Grunt/LeSS
+* 数据库相关：MongoDb/MySQL/Redis
+* 版本管理、文档：Svn/Git/gitbook
+* 开放平台：微信应用开发/百度,高德地图/个推/七牛
+* 前端方面知识参加了2015年的网易的前端微专业课程，并获得了[网易前端微专业证书](http://study.163.com/cert/Authority.htm?certNo=M2015120000025)
+* 懂基本的数据结构与算法，在校期间参加过《蓝桥杯》获得过省三级
+
+
 # 工作经历
 
 ## 上海云加科技信息有限公司 （ 2016年2月 ~ 2017年3月（在职） ）
@@ -134,27 +157,6 @@ date: 2017-03-09 22:01:31
 我在这里做过1年的java后端，项目技术上大都大同小异，该公司当时的技术没有采用前后端分离，我当时候拿到前端的页面，然后把他转换成jsp页面，有操作逻辑的还要自己写js与后台打交道。后来组长叫我一个人做管理后台页面（前后端自己写），第一次使用EasyUI有点生疏，后来一个人默默加班慢慢熬出来了，一回生二回熟，逐渐掌握EasyUI的套路，自己根据后台RESTful风格的api  封装出 一个操作类，以后做一个页面只需几句话便能实现列表查询，既方便维护又增加开发速度。
 
 ---
-
-# 开源项目和作品
-
-* [网易云课堂页面(仿写)](https://github.com/ipengyo/neteaseCloudClassroom)：这个项目是2015年时候我自己在网易云课堂上面报名前端教学的时候的大作业，目前github上面有40+ star
-
-* [mlop-geo](https://github.com/ipengyo/mlop-geo)：这个项目是在一个Node.js项目，作用是封装 地理查询接口，列如：根据经纬度查询到该经纬度所对应的地理信息 国家、省份、城市 等。（项目略简单）
-
-# 技能清单
-
-以下均为我熟练使用的技能
-
-* 开发环境：Mac (上一家公司一直在用Mac开发)
-* Web开发：Node.js（目前在做的）/ Java（之前做过1年）
-* Web框架：Express/Sails.js/spring
-* 前端框架：Bootstrap/AngularJS/jQuery
-* 前端工具：Bower/Gulp/Grunt/LeSS
-* 数据库相关：MongoDb/MySQL/Redis
-* 版本管理、文档：Svn/Git/gitbook
-* 开放平台：微信应用开发/百度,高德地图/个推/七牛
-* 前端方面知识参加了2015年的网易的前端微专业课程，并获得了[网易前端微专业证书](http://study.163.com/cert/Authority.htm?certNo=M2015120000025)
-* 懂基本的数据结构与算法，在校期间参加过《蓝桥杯》获得过省三级
 
 # 致谢
 感谢您花时间阅读我的简历，期待能有机会和您共事。
